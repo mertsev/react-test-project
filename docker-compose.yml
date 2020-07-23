@@ -1,0 +1,14 @@
+
+version: '3'
+
+services:
+  react:
+    build: ./
+    command: sh -c "npm install && npm start"
+    environment:
+      - NODE_ENV=development
+    ports:
+      - '3000:3000'
+    working_dir: /usr/src/react
+    volumes:
+      - ./:/usr/src/backend:cached
