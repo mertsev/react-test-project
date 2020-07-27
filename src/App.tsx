@@ -2,12 +2,15 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { NumberViewerContainer, NumberSetterContainer } from './components';
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        {/*<Counter />*/}
+        <NumberSetterContainer />
+        <NumberViewerContainer />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>

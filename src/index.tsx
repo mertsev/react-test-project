@@ -5,14 +5,20 @@ import App from './App';
 import { store } from './app/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
-import { NumberViewerContainer, NumberSetterContainer } from './components';
+
+import { history } from './app/store'
+import {ConnectedRouter} from 'connected-react-router';
+import {Route, Switch} from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <NumberSetterContainer />
-      <NumberViewerContainer />
-      <App />
+        <ConnectedRouter history={history}>
+          <Switch>
+             <Route exact path="/" component={App}/>
+             <Route path="*" render={() => (<h1>PAGE NOT FOUND</h1>)}/>
+           </Switch>
+       </ConnectedRouter>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
