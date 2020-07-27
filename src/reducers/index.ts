@@ -9,11 +9,7 @@ import {
 import {createBrowserHistory} from 'history';
 
 export const history = createBrowserHistory();
-/*
-export default (history:any) => combineReducers({
-  router: connectRouter(history)
-  });
-*/
+
 export interface State {
   numberCollection: NumberCollectionState;
 }

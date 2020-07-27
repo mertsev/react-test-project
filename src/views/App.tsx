@@ -2,10 +2,16 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import { NumberViewerContainer, NumberSetterContainer } from './components';
+import { NumberViewerContainer, NumberSetterContainer } from '../components';
+
+import {
+  BrowserRouter as Router,
+  Link
+} from "react-router-dom";
 
 function App() {
   return (
+    <Router>
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -14,6 +20,19 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+
+        <span>
+          <div>
+            <ul>
+              <li>
+                <Link to="/"><li>Main page</li></Link>
+              </li>
+              <li>
+                <Link to="/material"><li>Material test app</li></Link>
+              </li>
+            </ul>
+            </div>
+        </span>
         <span>
           <span>Learn </span>
           <a
@@ -54,6 +73,7 @@ function App() {
         </span>
       </header>
     </div>
+    </Router>
   );
 }
 
