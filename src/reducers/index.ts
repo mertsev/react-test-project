@@ -23,4 +23,5 @@ export const rootReducers = combineReducers({
   numberCollection: numberCollectionReducer
 });
 
+export default history;
 
