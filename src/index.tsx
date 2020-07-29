@@ -6,22 +6,18 @@ import { store } from './app/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 
-import { history } from './reducers/index'
-import {ConnectedRouter} from 'connected-react-router';
-import {Route, Switch} from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import MaterialHome from './views/material-test/MaterialHome';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-        <ConnectedRouter history={history}>
-          <Switch>
-             <Route exact path="/" component={App}/>
-             <Route exact path="/material" component={MaterialHome}/>
-             <Route path="*" render={() => (<h1>PAGE NOT FOUND</h1>)}/>
-           </Switch>
-       </ConnectedRouter>
-    </Provider>
+    <BrowserRouter>
+      <Provider store={store}>
+          <Route path="/" exact component={App} />
+          <Route path="/material" component={MaterialHome} />
+          <App />
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
