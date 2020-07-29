@@ -15,7 +15,6 @@ ReactDOM.render(
       <Provider store={store}>
           <Route path="/" exact component={App} />
           <Route path="/material" component={MaterialHome} />
-          <App />
       </Provider>
     </BrowserRouter>
   </React.StrictMode>,
