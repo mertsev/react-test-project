@@ -1,0 +1,19 @@
+.companyStatus {
+    color: green;
+}
+
+.company-info__text {
+    font-weight: 300;
+    padding: 0 11px;
+    margin: 0 -11px;
+    font-style: normal;
+}
+
+.company-name {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0 0 2px;
+    font-weight: 400;
+    display: block;
+    color: #0c0e31;
+}
