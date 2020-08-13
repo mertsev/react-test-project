@@ -1,21 +1,14 @@
 import React from 'react';
 //import logo from './logo.svg';
-import {
-  Link
-} from "react-router-dom";
 import { BtcDataViewerContainer, BtcDataSetterContainer } from '../../components';
+import NavBar from '../../components/navbar';
 
 function MaterialHome() {
   return (
     <div className="App">
-      <header className="App-header">
+      <NavBar/>
         <BtcDataViewerContainer/>
         <BtcDataSetterContainer/>
-        <p>
-          Material app
-        </p>
-        <li><Link to="/">Main page</Link></li>
-      </header>
     </div>
   );
 }

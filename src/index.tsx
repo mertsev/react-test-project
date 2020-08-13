@@ -8,6 +8,7 @@ import * as serviceWorker from './serviceWorker';
 
 import { BrowserRouter, Route } from 'react-router-dom';
 import MaterialHome from './views/material-test/MaterialHome';
+import SparkHome from './views/spark/SparkHome';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,6 +16,7 @@ ReactDOM.render(
       <Provider store={store}>
           <Route path="/" exact component={App} />
           <Route path="/material" component={MaterialHome} />
+          <Route path="/spark" component={SparkHome} />
       </Provider>
     </BrowserRouter>
   </React.StrictMode>,
