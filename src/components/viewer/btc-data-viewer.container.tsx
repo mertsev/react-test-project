@@ -1,14 +1,14 @@
 import { connect } from 'react-redux';
 import { State } from '../../reducers';
-import { NumberViewerComponent } from './number-viewer.component';
+import { BtcDataViewerComponent } from './btc-data-viewer.component';
 
 const mapStateToProps = (state: State) => ({
-  numberCollection: state.numberCollection,
+  btcPriceCollection: state.btcPriceCollection,
 });
 
 const mapDispatchToProps = (dispatch: (arg0: import("../../common").BaseAction) => any) => ({});
 
-export const NumberViewerContainer = connect(
+export const BtcDataViewerContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(NumberViewerComponent);
+)(BtcDataViewerComponent);

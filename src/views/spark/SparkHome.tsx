@@ -3,16 +3,13 @@ import React from 'react';
 import {
   Link
 } from "react-router-dom";
-import { BtcDataViewerContainer, BtcDataSetterContainer } from '../../components';
 
-function MaterialHome() {
+function SparkHome() {
   return (
     <div className="App">
       <header className="App-header">
-        <BtcDataViewerContainer/>
-        <BtcDataSetterContainer/>
         <p>
-          Material app
+          Spark
         </p>
         <li><Link to="/">Main page</Link></li>
       </header>
@@ -20,4 +17,4 @@ function MaterialHome() {
   );
 }
 
-export default MaterialHome;
+export default SparkHome;

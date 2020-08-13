@@ -13,13 +13,13 @@ export const numberRequestCompletedAction = (
 });
 
 export const btcDataRequestStartAction = (): BaseAction => ({
-  type: actionIds.GET_NUMBER_REQUEST_START,
+  type: actionIds.GET_BTC_DATA_REQUEST_START,
   payload: null,
 });
 
 export const btcDataCompletedAction = (
-  numberGenerated: number
+  btcNumber: number
 ): BaseAction => ({
-  type: actionIds.GET_NUMBER_REQUEST_COMPLETED,
-  payload: numberGenerated,
+  type: actionIds.GET_BTC_DATA_REQUEST_COMPLETED,
+  payload: btcNumber
 });
