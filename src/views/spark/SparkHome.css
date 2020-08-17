@@ -9,6 +9,11 @@
     font-style: normal;
 }
 
+.company-info__title {
+    box-sizing: border-box;
+    color: rgb(12, 14, 49)
+}
+
 .company-name {
     font-size: 16px;
     line-height: 22px;
@@ -16,4 +21,26 @@
     font-weight: 400;
     display: block;
     color: #0c0e31;
+}
+
+.company-requisites {
+    box-sizing: border-box;
+}
+
+.company-row {
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 0 0 2px;
+    font-weight: 400;
+    display: block;
+    color: #0c0e31;
+}
+
+.leftcol {
+    width: 48%;
+}
+
+.rightcol {
+    width: 52%;
 }
