@@ -5,6 +5,7 @@ import { Button, styled, Grid, Paper } from "@material-ui/core";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import "./SparkHome.css";
 import { Link } from "react-router-dom";
+import CenteredTabs from "../../components/tabs";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -15,48 +16,19 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: theme.spacing(1),
       textAlign: "left",
       color: theme.palette.text.secondary,
-      marginBottom: theme.spacing(1),
+      marginBottom: theme.spacing(2),
+      marginTop: theme.spacing(2),
     },
   })
 );
-
-const MyButton = styled(Button)({
-  margin: 5,
-});
 
 function SparkHome() {
   const classes = useStyles();
   return (
     <div>
-      <div className="App">
+      <div className={classes.root}>
         <NavBar />
-        <MyButton variant="contained" color="primary">
-          Домой
-        </MyButton>
-        <MyButton variant="contained" color="primary">
-          Учредители
-        </MyButton>
-        <MyButton variant="contained" color="primary">
-          Связи
-        </MyButton>
-        <MyButton variant="contained" color="primary">
-          Надежность
-        </MyButton>
-        <MyButton variant="contained" color="primary">
-          Финансы
-        </MyButton>
-        <MyButton variant="contained" color="primary">
-          Госзакупки
-        </MyButton>
-        <MyButton variant="contained" color="primary">
-          Суды
-        </MyButton>
-        <MyButton variant="contained" color="primary">
-          Долги
-        </MyButton>
-        <MyButton variant="contained" color="primary">
-          Проверки
-        </MyButton>
+        <CenteredTabs />
       </div>
 
       <div className={classes.root}>
@@ -67,7 +39,7 @@ function SparkHome() {
           alignItems="center"
         >
           <Grid
-            container
+            container={true}
             direction="row"
             justify="space-evenly"
             alignItems="flex-start"

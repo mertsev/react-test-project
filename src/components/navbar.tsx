@@ -20,9 +20,6 @@ import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
 
-import { Link } from "react-router-dom";
-import { Switch } from "@material-ui/core";
-
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     grow: {
