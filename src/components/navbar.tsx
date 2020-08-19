@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme: Theme) =>
       marginRight: theme.spacing(2),
     },
     title: {
-      /*display: "none",*/
+      display: "none",
       [theme.breakpoints.up("sm")]: {
         display: "block",
       },
@@ -186,17 +186,9 @@ export default function PrimarySearchAppBar() {
           >
             <MenuIcon />
           </IconButton>
-
-          <IconButton>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
-          </IconButton>
-
           <Typography className={classes.title} variant="h6" noWrap={true}>
-            <Link to="/spark">Spark</Link>
+            Spark
           </Typography>
-
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -210,8 +202,6 @@ export default function PrimarySearchAppBar() {
               inputProps={{ "aria-label": "search" }}
             />
           </div>
-
-          <Switch value="checkedA" inputProps={{ "aria-label": "Switch A" }} />
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <IconButton aria-label="show 4 new mails" color="inherit">

@@ -12,9 +12,10 @@ const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
     },
     paper: {
-      padding: theme.spacing(2),
-      textAlign: "center",
+      padding: theme.spacing(1),
+      textAlign: "left",
       color: theme.palette.text.secondary,
+      marginBottom: theme.spacing(1),
     },
   })
 );
@@ -59,10 +60,20 @@ function SparkHome() {
       </div>
 
       <div className={classes.root}>
-        <Grid container={true} spacing={3}>
-          <Grid container={true} spacing={3}>
-            <Grid item={true} xs>
-              <Paper className={classes.paper}>
+        <Grid
+          container={true}
+          direction="row"
+          justify="center"
+          alignItems="center"
+        >
+          <Grid
+            container
+            direction="row"
+            justify="space-evenly"
+            alignItems="flex-start"
+          >
+            <Grid item={true} xs={11} sm={6}>
+              <Paper className={classes.paper} elevation={3}>
                 <div className="leftcol">
                   <div className="company-requisites">
                     <div className="companyName">
@@ -176,8 +187,8 @@ function SparkHome() {
                 </div>
               </Paper>
             </Grid>
-            <Grid item={true} xs>
-              <Paper className={classes.paper}>
+            <Grid item={true} xs={11} sm={5}>
+              <Paper className={classes.paper} elevation={3}>
                 <div className="rightcol">
                   <div className="company-row">
                     <span className="company-info__title">
@@ -304,24 +315,9 @@ function SparkHome() {
                 </div>
               </Paper>
             </Grid>
-          </Grid>
-          <Grid item={true} xs={12} sm={6}>
-            <Paper className={classes.paper}>xs=12 sm=6</Paper>
-          </Grid>
-          <Grid item={true} xs={12} sm={6}>
-            <Paper className={classes.paper}>xs=12 sm=6</Paper>
-          </Grid>
-          <Grid item={true} xs={6} sm={3}>
-            <Paper className={classes.paper}>xs=6 sm=3</Paper>
-          </Grid>
-          <Grid item={true} xs={6} sm={3}>
-            <Paper className={classes.paper}>xs=6 sm=3</Paper>
-          </Grid>
-          <Grid item={true} xs={6} sm={3}>
-            <Paper className={classes.paper}>xs=6 sm=3</Paper>
-          </Grid>
-          <Grid item={true} xs={6} sm={3}>
-            <Paper className={classes.paper}>xs=6 sm=3</Paper>
+            <Grid item={true} xs={6} sm={3}>
+              <Paper className={classes.paper}>xs=6 sm=3</Paper>
+            </Grid>
           </Grid>
         </Grid>
       </div>
