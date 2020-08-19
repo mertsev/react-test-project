@@ -16,7 +16,7 @@ ReactDOM.render(
       <Provider store={store}>
         <Route path="/" exact={true} component={App} />
         <Route path="/material" component={MaterialHome} />
-        <Route path="/spark" component={SparkHome} />
+        <Route path="/spark/home/:number" component={SparkHome} />
       </Provider>
     </BrowserRouter>
   </React.StrictMode>,

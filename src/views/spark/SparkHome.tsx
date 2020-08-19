@@ -1,9 +1,10 @@
 import React from "react";
 // import logo from './logo.svg';
 import NavBar from "../../components/navbar";
-import { Button, styled, Grid, Paper } from "@material-ui/core";
+import { Button, styled, Grid, Card, Typography } from "@material-ui/core";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
-import "./SparkHome.css";
+
+import CardContent from "@material-ui/core/CardContent";
 import { Link } from "react-router-dom";
 import CenteredTabs from "../../components/tabs";
 
@@ -12,12 +13,13 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       flexGrow: 1,
     },
-    paper: {
+    card: {
       padding: theme.spacing(1),
       textAlign: "left",
-      color: theme.palette.text.secondary,
-      marginBottom: theme.spacing(2),
-      marginTop: theme.spacing(2),
+      marginBottom: theme.spacing(1),
+      marginLeft: theme.spacing(1),
+      marginRight: theme.spacing(1),
+      marginTop: theme.spacing(1),
     },
   })
 );
@@ -35,261 +37,217 @@ function SparkHome() {
         <Grid
           container={true}
           direction="row"
-          justify="center"
-          alignItems="center"
+          justify="space-evenly"
+          alignItems="flex-start"
         >
-          <Grid
-            container={true}
-            direction="row"
-            justify="space-evenly"
-            alignItems="flex-start"
-          >
-            <Grid item={true} xs={11} sm={6}>
-              <Paper className={classes.paper} elevation={3}>
-                <div className="leftcol">
-                  <div className="company-requisites">
-                    <div className="companyName">
-                      <h3>
-                        ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "НЕФТЯНАЯ КОМПАНИЯ
-                        "РОСНЕФТЬ"
-                      </h3>
-                    </div>
-                    <div className="companyStatus" color="lightGreen">
-                      <p>Действующая организация</p>
-                    </div>
-                    <dl className="companyCol">
-                      <dt className="company-info__title">ОГРН</dt>
-                      <dd className="company-info__text">
-                        <span id="clip_ogrn">1027700043502</span>
-                      </dd>
-                      <dd className="company-info__text">
-                        <span id="clip_ogrn"> от 19 июля 2002 г.</span>
-                      </dd>
-                    </dl>
-                    <dl className="companyCol">
-                      <dt className="company-info__title">ИНН/КПП</dt>
-                      <dd className="company-info__text">
-                        <span id="clip_inn">7706107510</span>
-                      </dd>
-                      <dd className="company-info__text">
-                        <span id="clip_kpp">770601001</span>
-                      </dd>
-                    </dl>
-                    <dl className="companyCol">
-                      <dt className="company-info__title">Дата регистрации</dt>
-                      <dd className="company-info__text">
-                        <span id="foundingDate">07.06.1993</span>
-                      </dd>
-                      <dt className="company-info__title">Уставный капитал</dt>
-                      <dd className="company-info__text">
-                        <span id="foundingDate">105 981 778,17 руб.</span>
-                      </dd>
-                    </dl>
-                    <dl>
-                      <dt className="company-info__title">Юридический адрес</dt>
-                      <dd className="company-info__text">
-                        <span itemProp="postalCode">115035, </span>
-                        <span itemProp="addressRegion">город Москва, </span>
-                        <span itemProp="streetAddress">
-                          Софийская набережная, 26/1
-                        </span>
-                      </dd>
-                    </dl>
-                  </div>
-                  <dl>
-                    <div className="company-row hidden-parent">
-                      <dl>
-                        <dt>
-                          <span className="company-info__title">
-                            Руководитель
+          <Grid item={true} xs={12} sm={12}>
+            <Card className={classes.card} elevation={2}>
+              <CardContent>
+                <Typography gutterBottom={true} variant="h5">
+                  ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "НЕФТЯНАЯ КОМПАНИЯ "РОСНЕФТЬ"
+                </Typography>
+                <Typography variant="overline">
+                  Действующая организация
+                </Typography>
+                <Grid
+                  container={true}
+                  direction="row"
+                  justify="flex-start"
+                  alignItems="flex-start"
+                >
+                  <Grid item={true} xs={12} sm={4}>
+                    <Card className={classes.card} elevation={3}>
+                      <CardContent>
+                        <Typography variant="subtitle1">ОГРН</Typography>
+                        <Typography variant="body1" color="textSecondary">
+                          1027700043502
+                        </Typography>
+                        <Typography variant="body1" color="textSecondary">
+                          от 19 июля 2002 г.
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  </Grid>
+                  <Grid item={true} xs={12} sm={4}>
+                    <Card className={classes.card} elevation={3}>
+                      <CardContent>
+                        <Typography variant="subtitle1">ИНН/КПП</Typography>
+                        <Typography variant="body1" color="textSecondary">
+                          7706107510
+                        </Typography>
+                        <Typography variant="body1" color="textSecondary">
+                          770601001
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  </Grid>
+                  <Grid item={true} xs={12} sm={4}>
+                    <Card className={classes.card} elevation={3}>
+                      <CardContent>
+                        <Typography variant="subtitle1">
+                          Юридический адрес
+                        </Typography>
+                        <Typography variant="body1" color="textSecondary">
+                          <span itemProp="postalCode">115035, </span>
+                          <span itemProp="addressRegion">город Москва, </span>
+                          <span itemProp="streetAddress">
+                            Софийская набережная, 26/1
                           </span>
-                        </dt>
-                        <span className="chief-title">
-                          ГЛАВНЫЙ ИСПОЛНИТЕЛЬНЫЙ ДИРЕКТОР
-                        </span>
-                        <span className="company-info__text">
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  </Grid>
+                  <Grid item={true} xs={12} sm={3}>
+                    <Card className={classes.card} elevation={3}>
+                      <CardContent>
+                        <Typography variant="subtitle1">
+                          Руководитель
+                        </Typography>
+                        <Typography variant="subtitle2" color="textSecondary">
+                          Главный исполнительный директор
+                        </Typography>
+                        <Typography variant="subtitle1">
                           Сечин Игорь Иванович
-                        </span>
-                        <span className="chief-title">с 9 июня 2012 г.</span>
-                      </dl>
-                    </div>
-                  </dl>
-                  <div className="company-row">
-                    <dt>
-                      <span className="company-info__title">
-                        Держатель реестра акционеров
-                      </span>
-                    </dt>
-                    <span className="company-info__text">
-                      <a href="/id/1282692" className="link-arrow">
-                        <span>
-                          ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ"РЕЕСТР-РН"
-                        </span>
-                      </a>
-                    </span>
-                  </div>
-                  <div className="company-row">
-                    <span className="company-info__title">
-                      Правопредшественники
-                    </span>
-                    <div className="company-info__title hidden-parent">
-                      <a href="/id/4517659" className="link-arrow noarrow">
-                        <span>ОАО "НК "Роснефть" - Сахалинморнефтегаз"</span>
-                      </a>
-                      ,
-                      <a href="/id/10873356" className="link-arrow noarrow">
-                        <span>ОАО "НК "Роснефть"-Краснодарнефтегаз"</span>
-                      </a>
-                      ,
-                      <Button size="small" color="primary">
-                        Ещё 10
-                      </Button>
-                    </div>
-                    <div className="company-info__text">
-                      Подробнее в{" "}
-                      <a
-                        href="/egrul?ogrn=1027700043502#xblock_predsh"
-                        rel="nofollow"
-                        className="link-bolder"
-                      >
-                        выписке из ЕГРЮЛ
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </Paper>
-            </Grid>
-            <Grid item={true} xs={11} sm={5}>
-              <Paper className={classes.paper} elevation={3}>
-                <div className="rightcol">
-                  <div className="company-row">
-                    <span className="company-info__title">
-                      <dt>Основной вид деятельности</dt>
-                    </span>
-                    <span className="company-info__text">
-                      <dt>Добыча сырой нефти</dt>
-                      <span className="bolder">(06.10.1)</span>
-                    </span>
-                    <a
-                      href="/okved/583710"
-                      className="gtm_main_okved"
-                      rel="nofollow"
-                    >
-                      Все виды деятельности (45)
-                    </a>
-                  </div>
-                  <div className="company-row">
-                    <dt>
-                      <span className="company-info__title">
-                        Налоговый орган
-                      </span>
-                    </dt>
-                    <span className="company-info__text">
-                      Инспекция ФНС России № 6 по г. Москве
-                    </span>
-                    <span className="chief-title">с 7 июня 1993 г.</span>
-                  </div>
-                  <dl className="company-row">
-                    <dt className="company-info__title">Коды статистики</dt>
-                    <dd className="company-info__text has-copy">
-                      <span className="copy_title">ОКПО</span>
-                      <span className="copy_target" id="clip_okpo">
-                        00044428
-                      </span>
-                      <span
-                        className="copy_button clipper"
-                        data-clipboard-target="#clip_okpo"
-                        data-quetip="Скопировано"
-                        data-quetime="500"
-                      />
-                    </dd>
-                    <dd className="company-info__text has-copy">
-                      <span className="copy_title">ОКАТО</span>
-                      <span className="copy_target" id="clip_okato">
-                        45286596000
-                      </span>
-                      <span
-                        className="copy_button clipper"
-                        data-clipboard-target="#clip_okato"
-                        data-quetip="Скопировано"
-                        data-quetime="500"
-                      />
-                    </dd>
-                    <dd className="company-info__text has-copy">
-                      <span className="copy_title">ОКТМО</span>
-                      <span className="copy_target" id="clip_oktmo">
-                        45384000000
-                      </span>
-                      <span
-                        className="copy_button clipper"
-                        data-clipboard-target="#clip_oktmo"
-                        data-quetip="Скопировано"
-                        data-quetime="500"
-                      />
-                    </dd>
-                    <dd className="company-info__text has-copy">
-                      <span className="copy_title">ОКФС</span>
-                      <span className="copy_target" id="clip_okfs">
-                        49
-                      </span>
-                      <span
-                        className="copy_button clipper"
-                        data-clipboard-target="#clip_okfs"
-                        data-quetip="Скопировано"
-                        data-quetime="500"
-                      />
-                    </dd>
-                    <dd className="company-info__text">
-                      <span className="chief-title">
-                        Иная смешанная российская собственность
-                      </span>
-                    </dd>
-                    <dd className="company-info__text has-copy">
-                      <span className="copy_title">ОКОГУ</span>
-                      <span className="copy_target" id="clip_okogu">
-                        4100614
-                      </span>
-                      <span
-                        className="copy_button clipper"
-                        data-clipboard-target="#clip_okogu"
-                        data-quetip="Скопировано"
-                        data-quetime="500"
-                      />
-                    </dd>
-                    <dd className="company-info__text">
-                      <span className="chief-title">
-                        Открытое акционерное общество "Нефтяная компания
-                        "Роснефть"
-                      </span>
-                    </dd>
-                  </dl>
-                  <div className="company-row">
-                    <dl>
-                      <dt>
-                        <span className="company-info__title">Контакты</span>
-                      </dt>
-                      <dl>
-                        <span className="company-info__contact site">
-                          <span className="offscreen">Официальный сайт</span>
+                        </Typography>
+                        <Typography variant="subtitle2" color="textSecondary">
+                          с 9 июня 2012 г.
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  </Grid>
+                  <Grid item={true} xs={12} sm={6}>
+                    <Card className={classes.card} elevation={3}>
+                      <CardContent>
+                        <Typography>
+                          <span className="company-info__title">
+                            Держатель реестра акционеров
+                          </span>
+                        </Typography>
+                        <Typography variant="subtitle2" color="textSecondary">
+                          <span className="company-info__text">
+                            <a href="/id/1282692" className="link-arrow">
+                              <span>
+                                ОБЩЕСТВО С ОГРАНИЧЕННОЙ
+                                ОТВЕТСТВЕННОСТЬЮ"РЕЕСТР-РН"
+                              </span>
+                            </a>
+                          </span>
+                        </Typography>
+                        <Typography variant="subtitle1">
+                          <span className="company-info__title">
+                            Правопредшественники
+                          </span>
+                        </Typography>
+                        <Typography variant="subtitle2" color="textSecondary">
+                          <a href="/id/4517659" className="link-arrow noarrow">
+                            <span>
+                              ОАО "НК "Роснефть" - Сахалинморнефтегаз"
+                            </span>
+                          </a>
+                          ,
+                          <a href="/id/10873356" className="link-arrow noarrow">
+                            <span>ОАО "НК "Роснефть"-Краснодарнефтегаз"</span>
+                          </a>
+                          ,
+                          <Button size="small" color="primary">
+                            Ещё 10
+                          </Button>
+                        </Typography>
+                        <Typography>
+                          Подробнее в{" "}
+                          <a
+                            href="/egrul?ogrn=1027700043502#xblock_predsh"
+                            rel="nofollow"
+                            className="link-bolder"
+                          >
+                            выписке из ЕГРЮЛ
+                          </a>
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  </Grid>
+                  <Grid item={true} xs={12} sm={3}>
+                    <Card className={classes.card} elevation={3}>
+                      <CardContent>
+                        <Typography variant="subtitle1">
+                          Основной вид деятельности
+                        </Typography>
+                        <Typography variant="subtitle2" color="textSecondary">
+                          <dt>Добыча сырой нефти</dt>
+                          <dt>(06.10.1)</dt>
+                        </Typography>
+                        <Typography variant="subtitle1">
+                          <a
+                            href="/okved/583710"
+                            className="gtm_main_okved"
+                            rel="nofollow"
+                          >
+                            Все виды деятельности (45)
+                          </a>
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  </Grid>
+                  <Grid item={true} xs={12} sm={3}>
+                    <Card className={classes.card} elevation={3}>
+                      <CardContent>
+                        <Typography variant="subtitle1">
+                          Налоговый орган
+                        </Typography>
+                        <Typography variant="subtitle2" color="textSecondary">
+                          <span className="company-info__text">
+                            Инспекция ФНС России № 6 по г. Москве
+                          </span>
+                        </Typography>
+                        <Typography variant="subtitle1">
+                          с 7 июня 1993 г.
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  </Grid>
+                  <Grid item={true} xs={12} sm={6}>
+                    <Card className={classes.card} elevation={3}>
+                      <CardContent>
+                        <Typography variant="subtitle1">
+                          Коды статистики
+                        </Typography>
+                        <Typography variant="subtitle2" color="textSecondary">
+                          <dt>ОКПО 00044428</dt>
+                          <dt>ОКАТО 45286596000</dt>
+                          <dt>ОКТМО 45384000000</dt>
+                          <dt>ОКФС 49</dt>
+                        </Typography>
+                        <Typography variant="overline">
+                          <dt>Иная смешанная российская собственность</dt>
+                        </Typography>
+                        <Typography variant="subtitle2" color="textSecondary">
+                          <dt>ОКОГУ4100614</dt>
+                          <dt>ОКПО00044428</dt>
+                        </Typography>
+                        <Typography variant="overline">
                           <dt>
-                            <Link
-                              component={Button}
-                              rel="noopener"
-                              to="http://www.rosneft.ru"
-                            >
-                              www.rosneft.ru
-                            </Link>
+                            Открытое акционерное общество "Нефтяная компания
+                            "Роснефть"
                           </dt>
-                        </span>
-                      </dl>
-                    </dl>
-                  </div>
-                </div>
-              </Paper>
-            </Grid>
-            <Grid item={true} xs={6} sm={3}>
-              <Paper className={classes.paper}>xs=6 sm=3</Paper>
-            </Grid>
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  </Grid>
+                  <Grid item={true} xs={12} sm={3}>
+                    <Card className={classes.card} elevation={3}>
+                      <CardContent>
+                        <Typography variant="subtitle1">Контакты</Typography>
+                        <dt>
+                          <Link rel="noopener" to="http://www.rosneft.ru">
+                            www.rosneft.ru
+                          </Link>
+                        </dt>
+                      </CardContent>
+                    </Card>
+                  </Grid>
+                </Grid>
+              </CardContent>
+            </Card>
           </Grid>
         </Grid>
       </div>
