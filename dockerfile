@@ -1,19 +1,16 @@
-FROM node:latest
+FROM node:14-alpine
 
-# создание директории приложения
-WORKDIR /usr/src/react
+RUN mkdir /usr/app
+WORKDIR /usr/app
 
-# установка зависимостей
-# символ астериск ("*") используется для того чтобы по возможности 
-# скопировать оба файла: package.json и package-lock.json
-COPY package*.json ./
-
+ADD package.json ./
+ADD package-lock.json ./
 RUN npm install
-# Если вы создаете сборку для продакшн
-# RUN npm ci --only=production
 
-# копируем исходный код
-COPY . .
+ADD . /usr/app
 
-EXPOSE 3000
-CMD [ "npm start" ]
+RUN npm run build
+
+EXPOSE 8080
+
+CMD ["/usr/app/node_modules/.bin/serve", "-s", "build", "-p", "8080"]
