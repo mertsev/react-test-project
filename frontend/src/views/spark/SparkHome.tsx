@@ -1,7 +1,7 @@
 import React from "react";
 // import logo from './logo.svg';
 import NavBar from "../../components/navbar";
-import { Button, styled, Grid, Card, Typography } from "@material-ui/core";
+import { Button, Grid, Card, Typography } from "@material-ui/core";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 
 import CardContent from "@material-ui/core/CardContent";
