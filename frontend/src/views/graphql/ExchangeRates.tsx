@@ -1,14 +1,6 @@
-import { useQuery, gql } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import React from 'react';
-
-const EXCHANGE_RATES = gql`
-  query GetExchangeRates {
-    rates(currency: "USD") {
-      currency
-      rate
-    }
-  }
-`;
+import EXCHANGE_RATES from "../../graphql/queries/EXCHANGE_RATES"
 
 function ExchangeRates() {
   const { loading, error, data } = useQuery(EXCHANGE_RATES);
