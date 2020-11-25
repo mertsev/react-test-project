@@ -3,7 +3,7 @@ import { BtcNumberAction, actionIds } from '../common';
 export type btcNumberCollectionState = number[];
 
 export const btcNumberCollectionReducer = (
-  state: btcNumberCollectionState = [0],
+  state: btcNumberCollectionState = [],
   action: BtcNumberAction
 ) => {
   switch (action.type) {
