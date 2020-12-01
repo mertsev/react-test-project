@@ -23,3 +23,15 @@ export const btcDataCompletedAction = (
   type: actionIds.GET_BTC_DATA_REQUEST_COMPLETED,
   payload: btcNumber
 });
+
+export const placeholderDataRequestStartAction = (): BaseAction => ({
+  type: actionIds.GET_PLACEHOLDER_DATA_REQUEST_START,
+  payload: null,
+});
+
+export const placeholderDataCompletedAction = (
+  placeholderData: []
+): BaseAction => ({
+  type: actionIds.GET_PLACEHOLDER_DATA_REQUEST_COMPLETED,
+  payload: placeholderData
+});

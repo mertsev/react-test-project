@@ -9,12 +9,14 @@ import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter, Route } from "react-router-dom";
 import MaterialHome from "./views/material-test/MaterialHome";
 import SparkHome from "./views/spark/SparkHome";
+import SparkMainPage from "./views/spark/SparkMainPage";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider store={store}>
         <Route path="/" exact={true} component={App} />
+        <Route path="/home" exact={true} component={SparkMainPage} />
         <Route path="/material" component={MaterialHome} />
         <Route path="/spark/home/:number" component={SparkHome} />
       </Provider>
