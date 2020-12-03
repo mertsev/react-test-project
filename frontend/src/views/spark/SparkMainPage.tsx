@@ -1,15 +1,10 @@
 import React from "react";
 import NavBar from "../../components/navbar";
 import {
-  Grid,
-  Card,
-  CardContent,
   makeStyles,
   createStyles,
   Theme,
-  Typography,
 } from "@material-ui/core";
-import { Link } from "react-router-dom";
 import { PlaceholderDataSetterContainer, PlaceholderDataViewerContainer } from "../../components";
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -40,20 +35,6 @@ function SparkMainPage() {
         <PlaceholderDataViewerContainer/>
         <PlaceholderDataSetterContainer/>
       </div>
-      {/*
-      <div>
-        <Grid item={true} xs={12} sm={12}>
-          <Card className={classes.card} elevation={2}>
-            <CardContent>
-              <Typography gutterBottom={true} variant="h5">
-                <Link rel="noopener" to="spark/home/1">
-                  ПУБЛИЧНОЕ АКЦИОНЕРНОЕ ОБЩЕСТВО "НЕФТЯНАЯ КОМПАНИЯ "РОСНЕФТЬ"
-                </Link>
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-      </div>*/}
     </div>
   );
 }
