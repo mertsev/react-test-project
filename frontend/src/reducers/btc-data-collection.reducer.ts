@@ -1,10 +1,10 @@
-import { BtcNumberAction, actionIds } from '../common';
+import { actionIds, BaseAction } from '../common';
 
 export type btcNumberCollectionState = number[];
 
 export const btcNumberCollectionReducer = (
   state: btcNumberCollectionState = [],
-  action: BtcNumberAction
+  action: BaseAction
 ) => {
   switch (action.type) {
     case actionIds.GET_BTC_DATA_REQUEST_COMPLETED:

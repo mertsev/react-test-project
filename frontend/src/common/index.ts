@@ -17,13 +17,3 @@ export interface BaseAction {
   type: string;
   payload: any;
 }
-
-export interface BtcNumberAction {
-  type: string;
-  payload: any;
-}
-
-export interface PlaceholderDataAction {
-  type: string;
-  payload: any;
-}
