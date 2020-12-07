@@ -11,6 +11,8 @@ import MaterialHome from "./views/material-test/MaterialHome";
 import SparkHome from "./views/spark/SparkHome";
 import SparkMainPage from "./views/spark/SparkMainPage";
 import FirstPage from "./views/spark/firstpage";
+import Page from "./views/spark/page";
+import Draft from "./views/spark/draft";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -20,7 +22,9 @@ ReactDOM.render(
         <Route path="/home" exact={true} component={SparkMainPage} />
         <Route path="/material" component={MaterialHome} />
         <Route path="/spark/home/:number" component={SparkHome} />
-        <Route path="/test" component={FirstPage} />
+        <Route path="/spark/test" component={FirstPage} />
+        <Route path="/spark/page" component={Page} />
+        <Route path="/spark/draft" component={Draft} />
       </Provider>
     </BrowserRouter>
   </React.StrictMode>,
