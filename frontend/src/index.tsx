@@ -13,6 +13,7 @@ import SparkMainPage from "./views/spark/SparkMainPage";
 import FirstPage from "./views/spark/firstpage";
 import Page from "./views/spark/page";
 import Draft from "./views/spark/draft";
+import Lic from "./views/spark/lic";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -25,6 +26,7 @@ ReactDOM.render(
         <Route path="/spark/test" component={FirstPage} />
         <Route path="/spark/page" component={Page} />
         <Route path="/spark/draft" component={Draft} />
+        <Route path="/spark/lic" component={Lic} />
       </Provider>
     </BrowserRouter>
   </React.StrictMode>,
