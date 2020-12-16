@@ -13,11 +13,8 @@ import SparkMainPage from "./views/spark/SparkMainPage";
 import FirstPage from "./views/spark/firstpage";
 import Page from "./views/spark/page";
 import Draft from "./views/spark/draft";
-<<<<<<< HEAD
 import Lic from "./views/spark/lic";
-=======
 import FormExample from "./views/spark/FormExample";
->>>>>>> 11d309571d57970c3dfd397f2ef1ad5915a98e78
 
 ReactDOM.render(
   <React.StrictMode>
