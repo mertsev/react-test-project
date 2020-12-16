@@ -14,6 +14,7 @@ import FirstPage from "./views/spark/firstpage";
 import Page from "./views/spark/page";
 import Draft from "./views/spark/draft";
 import FormExample from "./views/spark/FormExample";
+import SparkFounders from "./views/spark/SparkFounders";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -23,6 +24,7 @@ ReactDOM.render(
         <Route path="/home" exact={true} component={SparkMainPage} />
         <Route path="/material" component={MaterialHome} />
         <Route path="/spark/home/:number" component={SparkHome} />
+        <Route path="/spark/founders/:number" component={SparkFounders} />
         <Route path="/form" component={FormExample} />
         <Route path="/spark/test" component={FirstPage} />
         <Route path="/spark/page" component={Page} />
