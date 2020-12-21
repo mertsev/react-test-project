@@ -7,6 +7,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import NavBar from "../../components/navbar";
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -50,7 +51,7 @@ const rows = [
 
 const useStyles = makeStyles({
   table: {
-    minWidth: 700,
+    minWidth: 500,
   },
 });
 
