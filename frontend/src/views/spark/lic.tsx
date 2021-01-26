@@ -7,7 +7,6 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import NavBar from "../../components/navbar";
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -27,26 +26,26 @@ const StyledTableRow = withStyles((theme) => ({
   },
 }))(TableRow);
 
-function createData(name: string, 
-                    License: string, 
-                    Date1: string, Date2: string, Date3: string,
-                    Kod: string, Vid: string, Org: string) {
+function createData(name: string,
+  License: string,
+  Date1: string, Date2: string, Date3: string,
+  Kod: string, Vid: string, Org: string) {
   return { name, License, Date1, Date2, Date3, Kod, Vid, Org };
 }
 
 const rows = [
   createData('1027700070518',
-             'КРР 15946 НР',
-             '07.12.2015', '07.12.2015', 'Бессрочная',
-             '3474', 'Разведка и добыча полезных ископаемых', 'Департамент по недропользованию Центральному ФО'),
+    'КРР 15946 НР',
+    '07.12.2015', '07.12.2015', 'Бессрочная',
+    '3474', 'Разведка и добыча полезных ископаемых', 'Департамент по недропользованию Центральному ФО'),
   createData('1027700070518',
-             'КРР 15946 НР',
-             '07.12.2015', '07.12.2015', 'Бессрочная',
-             '3474', 'Разведка и добыча полезных ископаемых', 'Департамент по недропользованию Центральному ФО'),
+    'КРР 15946 НР',
+    '07.12.2015', '07.12.2015', 'Бессрочная',
+    '3474', 'Разведка и добыча полезных ископаемых', 'Департамент по недропользованию Центральному ФО'),
   createData('1027700070518',
-             'КРР 15946 НР',
-             '07.12.2015', '07.12.2015', 'Бессрочная',
-             '3474', 'Разведка и добыча полезных ископаемых', 'Департамент по недропользованию Центральному ФО'),
+    'КРР 15946 НР',
+    '07.12.2015', '07.12.2015', 'Бессрочная',
+    '3474', 'Разведка и добыча полезных ископаемых', 'Департамент по недропользованию Центральному ФО'),
 ];
 
 const useStyles = makeStyles({

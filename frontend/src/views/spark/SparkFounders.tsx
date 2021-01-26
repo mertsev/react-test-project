@@ -1,11 +1,10 @@
 import React from "react";
 // import logo from './logo.svg';
 import NavBar from "../../components/navbar";
-import { Button, Grid, Card, Typography } from "@material-ui/core";
+import { Grid, Card, Typography } from "@material-ui/core";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 
 import CardContent from "@material-ui/core/CardContent";
-import { Link } from "react-router-dom";
 import CenteredTabs from "../../components/tabs";
 
 const useStyles = makeStyles((theme: Theme) =>

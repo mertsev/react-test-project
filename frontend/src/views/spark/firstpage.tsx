@@ -12,7 +12,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import Img from './BackDark.png';
+//import Img from './BackDark.png';
 
 function Copyright() {
   return (
@@ -21,7 +21,7 @@ function Copyright() {
       <Link color="inherit" href="https://material-ui.com/">
         Бизнес-планирование и аналитика,
       </Link>{' '}
-      {new Date().getFullYear()}  
+      {new Date().getFullYear()}
       {'.'}
     </Typography>
   );
@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.secondary.main,
   },
   form: {
-    width: '100%', 
+    width: '100%',
     marginTop: theme.spacing(1),
   },
   submit: {

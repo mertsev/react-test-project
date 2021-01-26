@@ -14,7 +14,7 @@ import FirstPage from "./views/spark/firstpage";
 import Page from "./views/spark/page";
 import Draft from "./views/spark/draft";
 import Lic from "./views/spark/lic";
-import FormExanpmmple from "./views/spark/FormExample";
+import FormExample from "./views/spark/FormExample";
 import SparkFounders from "./views/spark/SparkFounders";
 
 ReactDOM.render(
